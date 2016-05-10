@@ -1,24 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Spotify.me</title>
+  <title>DINNER TIEM</title>
+  
   <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <!-- handlebars -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <!-- Parse CDN -->
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src="js/client.js"></script>
+  <!-- js -->
+  <script src="js/app.js"></script>
 </head>
 <body>
   
-  <form id="search">
-    <h1>spotify.me</h1>
-    <input type="search" id="search-keyword">
-    <select id="search-type">
-      <option value="artist">Search by artist</option>
-      <option value="track">Search by track name</option>
+  <form class="search">
+    <h1>WUTZ 4 DINNER?</h1>
+    <label for="search-keyword">Search a word (required).</label>
+    <input type="search" class="search-keyword parameter">
+    
+    <label for="search-cuisine">Feeling worldly?</label>
+    <select class="search-cuisine parameter">
+      <option value="">---</option>
+      <option value="african">african</option>
+      <option value="chinese">chinese</option>
+      <option value="japanese">japanese</option>
+      <option value="korean">korean</option>
+      <option value="vietnamese">vietnamese</option>
+      <option value="thai">thai</option>
+      <option value="indian">indian</option>
+      <option value="british">british</option>
+      <option value="irish">irish</option>
+      <option value="french">french</option>
+      <option value="italian">italian</option>
+      <option value="mexican">mexican</option>
+      <option value="spanish">spanish</option>
+      <option value="middle+eastern">middle eastern</option>
+      <option value="jewish">jewish</option>
+      <option value="american">american</option>
+      <option value="cajun">cajun</option>
+      <option value="southern">southern</option>
+      <option value="greek">greek</option>
+      <option value="german">german</option>
+      <option value="nordic">nordic</option>
+      <option value="eastern+european">eastern european</option>
+      <option value="caribbean">caribbean</option>
+      <option value="latin+american">latin american</option>
     </select>
+
+    <label for="search-type">A specific kind of dish?</label>
+    <select class="search-type parameter">
+      <option value="">---</option>
+      <option value="main+course">main course</option>
+      <option value="side+dish">side dish</option>
+      <option value="dessert">dessert</option>
+      <option value="appetizer">appetizer</option>
+      <option value="salad">salad</option>
+      <option value="bread">bread</option>
+      <option value="breakfast">breakfast</option>
+      <option value="soup">soup</option>
+      <option value="beverage">beverage</option>
+      <option value="sauce">sauce</option>
+    </select>
+
+    <label for="search-veg">U veggie bro?</label>
+    <select class="search-veg parameter">
+      <option value="">---</option>
+      <option value="vegetarian">vegetarian</option>
+      <option value="vegan">vegan</option>
+    </select>
+
+    <label for="search-intolerance">Can't eat s***? Select all that apply. (Cmd + Click)</label>
+    <select class="search-intolerance parameter" multiple>
+      <option value="dairy">dairy</option>
+      <option value="egg">egg</option>
+      <option value="gluten">gluten</option>
+      <option value="peanut">peanut</option>
+      <option value="sesame">sesame</option>
+      <option value="seafood">seafood</option>
+      <option value="shellfish">shellfish</option>
+      <option value="soy">soy</option>
+      <option value="sulfite">sulfite</option>
+      <option value="tree+nut">tree nut</option>
+      <option value="wheat">wheat</option>
+    </select>
+
     <input type="submit" value="Submit">
   </form>
   
-  <ul id="results"></ul>
+  <div class="results"></div>
 
-  <script src="js/jquery.js"></script>
-  <script src="js/spotify.js"></script>
 </body>
 </html>
