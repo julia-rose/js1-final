@@ -15,82 +15,99 @@
   <script src="js/app.js"></script>
 </head>
 <body>
-  
-  <form class="search">
-    <h1>WUTZ 4 DINNER?</h1>
-    <label for="search-keyword">Search a word (required).</label>
-    <input type="search" class="search-keyword parameter">
-    
-    <label for="search-cuisine">Feeling worldly?</label>
-    <select class="search-cuisine parameter">
-      <option value="">---</option>
-      <option value="african">african</option>
-      <option value="chinese">chinese</option>
-      <option value="japanese">japanese</option>
-      <option value="korean">korean</option>
-      <option value="vietnamese">vietnamese</option>
-      <option value="thai">thai</option>
-      <option value="indian">indian</option>
-      <option value="british">british</option>
-      <option value="irish">irish</option>
-      <option value="french">french</option>
-      <option value="italian">italian</option>
-      <option value="mexican">mexican</option>
-      <option value="spanish">spanish</option>
-      <option value="middle+eastern">middle eastern</option>
-      <option value="jewish">jewish</option>
-      <option value="american">american</option>
-      <option value="cajun">cajun</option>
-      <option value="southern">southern</option>
-      <option value="greek">greek</option>
-      <option value="german">german</option>
-      <option value="nordic">nordic</option>
-      <option value="eastern+european">eastern european</option>
-      <option value="caribbean">caribbean</option>
-      <option value="latin+american">latin american</option>
-    </select>
+  <div class="wrapper">
+    <div class="search-wrapper">
+      <h1>WUTZ 4 DINNER?</h1>
+      <form class="search">
+        <label for="search-keyword">Search a word (or don't).</label>
+        <input type="search" class="search-keyword parameter">
+        
+        <label for="search-cuisine">Feeling worldly?</label>
+        <select class="search-cuisine parameter">
+          <option value="">---</option>
+          <option value="african">african</option>
+          <option value="american">american</option>
+          <option value="southern">american (southern)</option>
+          <option value="british">british</option>
+          <option value="cajun">cajun</option>
+          <option value="caribbean">caribbean</option>
+          <option value="chinese">chinese</option>
+          <option value="eastern+european">eastern european</option>
+          <option value="french">french</option>
+          <option value="german">german</option>
+          <option value="greek">greek</option>
+          <option value="indian">indian</option>
+          <option value="irish">irish</option>
+          <option value="italian">italian</option>
+          <option value="japanese">japanese</option>
+          <option value="jewish">jewish</option>
+          <option value="korean">korean</option>
+          <option value="latin+american">latin american</option>
+          <option value="mexican">mexican</option>
+          <option value="middle+eastern">middle eastern</option>
+          <option value="nordic">nordic</option>
+          <option value="spanish">spanish</option>
+          <option value="thai">thai</option>
+          <option value="vietnamese">vietnamese</option>
+        </select>
 
-    <label for="search-type">A specific kind of dish?</label>
-    <select class="search-type parameter">
-      <option value="">---</option>
-      <option value="main+course">main course</option>
-      <option value="side+dish">side dish</option>
-      <option value="dessert">dessert</option>
-      <option value="appetizer">appetizer</option>
-      <option value="salad">salad</option>
-      <option value="bread">bread</option>
-      <option value="breakfast">breakfast</option>
-      <option value="soup">soup</option>
-      <option value="beverage">beverage</option>
-      <option value="sauce">sauce</option>
-    </select>
+        <label for="search-type">A specific kind of dish?</label>
+        <select class="search-type parameter">
+          <option value="">---</option>
+          <option value="appetizer">appetizer</option>
+          <option value="beverage">beverage</option>
+          <option value="bread">bread</option>
+          <option value="breakfast">breakfast</option>
+          <option value="dessert">dessert</option>
+          <option value="main+course">main course</option>
+          <option value="salad">salad</option>
+          <option value="sauce">sauce</option>
+          <option value="side+dish">side dish</option>
+          <option value="soup">soup</option>  
+        </select>
 
-    <label for="search-veg">U veggie bro?</label>
-    <select class="search-veg parameter">
-      <option value="">---</option>
-      <option value="vegetarian">vegetarian</option>
-      <option value="vegan">vegan</option>
-    </select>
+        <label for="search-veg">U veggie bro?</label>
+        <select class="search-veg parameter">
+          <option value="">---</option>
+          <option value="vegetarian">vegetarian</option>
+          <option value="vegan">vegan</option>
+        </select>
 
-    <label for="search-intolerance">Can't eat s***? Select all that apply. (Cmd + Click)</label>
-    <select class="search-intolerance parameter" multiple>
-      <option value="dairy">dairy</option>
-      <option value="egg">egg</option>
-      <option value="gluten">gluten</option>
-      <option value="peanut">peanut</option>
-      <option value="sesame">sesame</option>
-      <option value="seafood">seafood</option>
-      <option value="shellfish">shellfish</option>
-      <option value="soy">soy</option>
-      <option value="sulfite">sulfite</option>
-      <option value="tree+nut">tree nut</option>
-      <option value="wheat">wheat</option>
-    </select>
+        <label for="search-intolerance">Can't eat s***? Select all that apply. (Cmd + Click)</label>
+        <select class="search-intolerance parameter" multiple>
+          <option value="dairy">dairy</option>
+          <option value="egg">egg</option>
+          <option value="gluten">gluten</option>
+          <option value="peanut">peanut</option>
+          <option value="seafood">seafood</option>
+          <option value="sesame">sesame</option>
+          <option value="shellfish">shellfish</option>
+          <option value="soy">soy</option>
+          <option value="sulfite">sulfite</option>
+          <option value="tree+nut">tree nut</option>
+          <option value="wheat">wheat</option>
+        </select>
 
-    <input type="submit" value="Submit">
-  </form>
-  
-  <div class="results"></div>
+        <input class="search-button" type="submit" value="Search">
+
+        <button class="faves-button">See My Favorites</button>
+      </form>
+    </div>
+
+    <div class="results-wrapper">
+      <div class="results"></div>
+    </div>
+
+    <div class="faves-modal">
+      <div class="modal-content">
+        <div class="modal-topbar">
+          <span class="close-button">x</span>
+        </div>
+        <p class="faves-empty">Add something to your favorites!</p>
+        <ul class="faves-list"></ul>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

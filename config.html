@@ -10,6 +10,7 @@
     <input type="text" name="APP_ID" placeholder="APP_ID">
     <input type="text" name="API_KEY" placeholder="API_KEY">
     <input type="text" name="API_HOST" placeholder="API_HOST">
+    <input type="text" name="SPOONACULAR" placeholder="SPOONACULAR">
     <input type="submit">
   </form>
 	<br>
@@ -18,15 +19,18 @@
     var appId = document.querySelector("input[name='APP_ID']");
     var apiKey = document.querySelector("input[name='API_KEY']");
     var apiHost = document.querySelector("input[name='API_HOST']");
+    var spoonacular = document.querySelector("input[name='SPOONACULAR']");
     form.addEventListener("submit", function(e){
       e.preventDefault();
       localStorage.setItem("APP_ID", appId.value)
       localStorage.setItem("API_KEY", apiKey.value)
       localStorage.setItem("API_HOST", apiHost.value)
+      localStorage.setItem("SPOONACULAR", spoonacular.value)
     })
     var APP_ID = localStorage.getItem("APP_ID")
     var API_KEY = localStorage.getItem("API_KEY")
     var API_HOST = localStorage.getItem("API_HOST")
+    var _SPOONACULAR = localStorage.getItem("SPOONACULAR")
     if(APP_ID){
       appId.value = APP_ID
     }
@@ -35,6 +39,9 @@
     }
     if(API_HOST){
       apiHost.value = API_HOST
+    }
+    if(_SPOONACULAR){
+      spoonacular.value = _SPOONACULAR
     }
   </script>
 </body>

@@ -1,7 +1,9 @@
 body {
-  display: flex;
   font: 16px/1.5 Helvetica Neue, Helvetica, sans-serif;
+  padding: 0;
   margin: 0;
+  background-color: #EBC793;
+  color: #524E67;
 }
 
 h1 {
@@ -13,24 +15,167 @@ a {
   color: #c00;
 }
 
+.wrapper {
+  position: relative;
+}
+
+.search-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 275px;
+  background-color: #563552;
+  color: #EBC793;
+  padding: 10px 25px;
+}
+
 .search {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 100vh;
-  background-color: black;
-  color: #fff;
-  padding: 10px 25px;
+  color: #CED3AE;
 }
 
 .parameter {
   margin-bottom: 15px;
 }
 
+.search-button {
+  background-color: #A8AD8D;
+  color: #524E67;
+  border: 3px #524E67 solid;
+  border-radius: 2px;
+  padding: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.results-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 350px;
+  right: 0;
+}
+
 .results {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  height: 100vh;
-  width: 100vw;
-  background-color: #b3b3b3;
+  padding: 15px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 0;
+  padding: 20px 10px 10px 10px;
+  text-align: center;
+}
+
+.image-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border: 3px #524E67 solid;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.result-image {
+  position: relative;
+  width: 200%;
+  bottom: 30px;
+  right: 30px;
+}
+
+.url {
+  text-decoration: none;
+  color: #524E67;
+}
+
+.url:hover {
+  text-decoration: underline;
+}
+
+.button,
+.faves-button {
+  background-color: #6D7F7F;
+  color: #FCE4C2;
+  border: 3px #524E67 solid;
+  border-radius: 2px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.faves-button {
+  margin: 40px 0 0 0;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.faves-modal {
+  display: none;
+  justify-content: center;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 10;
+}
+
+.modal-topbar {
+  min-width: 100%;
+  height: 65px;
+  padding: 5px 16px 0 16px;
+  background-color: #6D7F7F;
+  color: #EBC793;
+  position: relative;
+  text-align: right;
+}
+
+.close-button {
+  position: relative;
+  font-size: 35px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  margin: 50px 0;
+  max-width: 480px;
+  overflow: auto;
+}
+
+p {
+    text-align: center;
+}
+
+.faves-list {
+  list-style: none;
+  padding-right: 40px;
+
+}
+
+.delete-button {
+  padding-left: 15px;
+  font-style: italic;
+  cursor: pointer;
+  color: #A8AD8D;
+}
+
+.faves-item {
+
 }
